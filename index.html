@@ -1,7 +1,83 @@
-<h1>Sobre a Barbearia Alura</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agro Forte</h1>
+        <p>Futuro Sustentável</p>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#slider">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<P>Localizada no coração da cidade a <strong>Barbearia Alura </strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</P>
+    <!-- Sobre -->
+    <section id="sobre" class="fade-in">
+        <h2>Sobre o Agro Forte</h2>
+        <p>O agronegócio é a base do desenvolvimento econômico e social do Brasil. Investir em práticas sustentáveis garante um futuro próspero para todos.</p>
+    </section>
 
-<P>Nossa missão é:<em> "Proporcionar auto-estima e qualidade de vida aos clientes".</em></P>
+    <!-- Cards de tecnologia -->
+    <section id="tecnologia" class="fade-in">
+        <h2>Tecnologia no Agro</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582515073490-39981336c5f0?auto=format&fit=crop&w=400&q=80" alt="Agricultura de precisão">
+                <h3>Agricultura de Precisão</h3>
+                <p>Uso de sensores e dados para aumentar a produtividade com menor impacto ambiental.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600136784640-b64f3947c37b?auto=format&fit=crop&w=400&q=80" alt="Drones no campo">
+                <h3>Drones e Sensores</h3>
+                <p>Monitoramento de plantações em tempo real para decisões mais eficientes.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506801310323-534be5e7e51b?auto=format&fit=crop&w=400&q=80" alt="Biotecnologia">
+                <h3>Biotecnologia</h3>
+                <p>Sementes resistentes e soluções inovadoras para a agricultura moderna.</p>
+            </div>
+        </div>
+    </section>
 
-<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p> 
+    <!-- Slider de imagens -->
+    <section id="slider" class="fade-in">
+        <h2>Galeria do Campo</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="https://images.unsplash.com/photo-1582515073490-39981336c5f0?auto=format&fit=crop&w=800&q=80" class="slide active">
+                <img src="https://images.unsplash.com/photo-1600136784640-b64f3947c37b?auto=format&fit=crop&w=800&q=80" class="slide">
+                <img src="https://images.unsplash.com/photo-1506801310323-534be5e7e51b?auto=format&fit=crop&w=800&q=80" class="slide">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="fade-in">
+        <h2>Fale Conosco</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu email" required>
+            <textarea id="message" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="response"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
