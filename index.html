@@ -3,81 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <style>
+        /* Reset básico e fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            background-color: #1e4620;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #85c874;
+        }
+
+        /* Banner Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tecnologia-campo.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* Container de Conteúdo */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Seção Sobre o Tema */
+        .sobre {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sobre h3 {
+            color: #1e4620;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Grid de Cards informativos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h4 {
+            color: #2e6f40;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a1a;
+            color: #bbb;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        /* Ajustes responsivos adicionais */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            header { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Agro Forte</h1>
-        <p>Futuro Sustentável</p>
+        <h1>Agro Sustentável</h1>
         <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#slider">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+            <a href="#inicio">Início</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <!-- Sobre -->
-    <section id="sobre" class="fade-in">
-        <h2>Sobre o Agro Forte</h2>
-        <p>O agronegócio é a base do desenvolvimento econômico e social do Brasil. Investir em práticas sustentáveis garante um futuro próspero para todos.</p>
+    <section id="inicio" class="hero">
+        <h2>Agro Forte, Futuro Sustentável</h2>
+        <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do nosso meio ambiente.</p>
     </section>
 
-    <!-- Cards de tecnologia -->
-    <section id="tecnologia" class="fade-in">
-        <h2>Tecnologia no Agro</h2>
-        <div class="cards">
+    <main class="container">
+        <section class="sobre">
+            <h3>Produzir com Consciência</h3>
+            <p>O agronegócio moderno utiliza a tecnologia a favor da natureza. O grande desafio atual, superado dia após dia, é garantir a segurança alimentar global reduzindo drasticamente os impactos ambientais.</p>
+        </section>
+
+        <section id="pilares" class="grid">
+            
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1582515073490-39981336c5f0?auto=format&fit=crop&w=400&q=80" alt="Agricultura de precisão">
-                <h3>Agricultura de Precisão</h3>
-                <p>Uso de sensores e dados para aumentar a produtividade com menor impacto ambiental.</p>
+                <img src="sustentabilidade.jpg" alt="Preservação Ambiental no Campo">
+                <div class="card-body">
+                    <h4>Preservação de Recursos</h4>
+                    <p>Manejo correto do solo, rotação de culturas e conservação de fontes de água garantem que a terra continue fértil e produtiva para as próximas gerações.</p>
+                </div>
             </div>
+
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1600136784640-b64f3947c37b?auto=format&fit=crop&w=400&q=80" alt="Drones no campo">
-                <h3>Drones e Sensores</h3>
-                <p>Monitoramento de plantações em tempo real para decisões mais eficientes.</p>
+                <img src="agricultura-precisao.jpg" alt="Drones e Agricultura de Precisão">
+                <div class="card-body">
+                    <h4>Tecnologia e Eficiência</h4>
+                    <p>A agricultura de precisão, com o uso de drones, sensores e inteligência artificial, otimiza a aplicação de insumos e evita o desperdício.</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1506801310323-534be5e7e51b?auto=format&fit=crop&w=400&q=80" alt="Biotecnologia">
-                <h3>Biotecnologia</h3>
-                <p>Sementes resistentes e soluções inovadoras para a agricultura moderna.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Slider de imagens -->
-    <section id="slider" class="fade-in">
-        <h2>Galeria do Campo</h2>
-        <div class="slider">
-            <div class="slides">
-                <img src="https://images.unsplash.com/photo-1582515073490-39981336c5f0?auto=format&fit=crop&w=800&q=80" class="slide active">
-                <img src="https://images.unsplash.com/photo-1600136784640-b64f3947c37b?auto=format&fit=crop&w=800&q=80" class="slide">
-                <img src="https://images.unsplash.com/photo-1506801310323-534be5e7e51b?auto=format&fit=crop&w=800&q=80" class="slide">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contato -->
-    <section id="contato" class="fade-in">
-        <h2>Fale Conosco</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu email" required>
-            <textarea id="message" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="response"></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Agro Forte - Todos os direitos reservados</p>
+    <footer id="contato">
+        <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Desenvolvido para fins educativos.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
