@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte, Futuro Sustentável</title>
     <style>
-        /* Reset básico e fontes */
+        /* Configurações Globais */
         * {
             margin: 0;
             padding: 0;
@@ -19,175 +19,293 @@
             line-height: 1.6;
         }
 
-        /* Cabeçalho / Menu */
+        /* Cabeçalho e Navegação */
         header {
-            background-color: #1e4620;
-            color: #ffffff;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #4caf50;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #2e7d32;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 15px;
+            padding: 10px 20px;
+            margin: 0 10px;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: background 0.3s;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #85c874;
+            background-color: #1b5e20;
         }
 
-        /* Banner Principal (Hero) */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tecnologia-campo.jpg') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-        }
-
-        /* Container de Conteúdo */
+        /* Container Principal */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* Seção Sobre o Tema */
-        .sobre {
-            text-align: center;
-            margin-bottom: 50px;
+        /* Seções */
+        section {
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .sobre h3 {
-            color: #1e4620;
-            font-size: 2rem;
-            margin-bottom: 15px;
+        h2 {
+            color: #2e7d32;
+            border-bottom: 3px solid #81c784;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        /* Grid de Cards informativos */
-        .grid {
+        /* Grid de Três Colunas (Pilares) */
+        .grid-pilares {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1-fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .card-body {
+            background-color: #f9fbf9;
             padding: 20px;
+            border-left: 5px solid #4caf50;
+            border-radius: 4px;
         }
 
-        .card-body h4 {
-            color: #2e6f40;
+        .card h3 {
+            color: #1b5e20;
             margin-bottom: 10px;
-            font-size: 1.3rem;
+        }
+
+        /* Tabela de Dados */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Formulário de Contato */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
         }
 
         /* Rodapé */
         footer {
-            background-color: #1a1a1a;
-            color: #bbb;
+            background-color: #1b5e20;
+            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            font-size: 0.9rem;
+            padding: 20px 0;
+            margin-top: 40px;
         }
 
-        /* Ajustes responsivos adicionais */
+        /* Responsividade */
         @media (max-width: 768px) {
-            .hero h2 { font-size: 2rem; }
-            header { flex-direction: column; gap: 10px; text-align: center; }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Agro Sustentável</h1>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#pilares">Pilares</a>
-            <a href="#contato">Contato</a>
-        </nav>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Inovação, tecnologia e respeito ao meio ambiente alimentando o mundo de forma consciente.</p>
     </header>
 
-    <section id="inicio" class="hero">
-        <h2>Agro Forte, Futuro Sustentável</h2>
-        <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do nosso meio ambiente.</p>
-    </section>
+    <nav>
+        <a href="#sobre">Sobre o Projeto</a>
+        <a href="#pilares">Pilares Sustentáveis</a>
+        <a href="#dados">Indicadores e Metas</a>
+        <a href="#contato">Participe</a>
+    </nav>
 
-    <main class="container">
-        <section class="sobre">
-            <h3>Produzir com Consciência</h3>
-            <p>O agronegócio moderno utiliza a tecnologia a favor da natureza. O grande desafio atual, superado dia após dia, é garantir a segurança alimentar global reduzindo drasticamente os impactos ambientais.</p>
+    <div class="container">
+
+        <section id="sobre">
+            <h2>O Poder da Agricultura Sustentável</h2>
+            <p>O agronegócio moderno enfrenta o maior desafio do século: aumentar a produção de alimentos para uma população global em crescimento, enquanto reduz drasticamente os impactos ambientais. O conceito de <strong>Agro Forte e Sustentável</strong> une a força econômica do campo com práticas de preservação que garantem a saúde do solo, dos rios e da atmosfera.</p>
+            <br>
+            <p>Através do uso de inteligência artificial, drones, maquinários de baixa emissão de carbono e técnicas de manejo biológico, o produtor rural deixa de ser apenas um fornecedor para se tornar um verdadeiro guardião do ecossistema.</p>
         </section>
 
-        <section id="pilares" class="grid">
+        <section id="pilares">
+            <h2>Tecnologias e Práticas de Impacto</h2>
+            <p>Conheça os métodos que estão transformando o campo e garantindo a resiliência da produção agrícola para as próximas gerações:</p>
             
-            <div class="card">
-                <img src="sustentabilidade.jpg" alt="Preservação Ambiental no Campo">
-                <div class="card-body">
-                    <h4>Preservação de Recursos</h4>
-                    <p>Manejo correto do solo, rotação de culturas e conservação de fontes de água garantem que a terra continue fértil e produtiva para as próximas gerações.</p>
+            <div class="grid-pilares">
+                <div class="card">
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Uso de sensores, GPS e mapeamento por satélite para aplicar água, fertilizantes e defensivos apenas onde é necessário. Evita o desperdício e protege os lençóis freáticos.</p>
+                </div>
+                <div class="card">
+                    <h3>Manejo Biológico</h3>
+                    <p>Substituição gradual de produtos químicos por defensores biológicos (bioinsumos). Organismos vivos e extratos naturais ajudam a controlar pragas sem agredir a biodiversidade local.</p>
+                </div>
+                <div class="card">
+                    <h3>Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
+                    <p>Estratégia que combina diferentes sistemas produtivos em uma mesma área. Otimiza o uso da terra, melhora o bem-estar animal e sequestra toneladas de carbono da atmosfera.</p>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="agricultura-precisao.jpg" alt="Drones e Agricultura de Precisão">
-                <div class="card-body">
-                    <h4>Tecnologia e Eficiência</h4>
-                    <p>A agricultura de precisão, com o uso de drones, sensores e inteligência artificial, otimiza a aplicação de insumos e evita o desperdício.</p>
-                </div>
-            </div>
-
         </section>
-    </main>
 
-    <footer id="contato">
-        <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Desenvolvido para fins educativos.</p>
+        <section id="dados">
+            <h2>Metas de Sustentabilidade para o Agronegócio</h2>
+            <p>Abaixo estão os indicadores globais monitorados para avaliar a evolução da sustentabilidade nas propriedades rurais:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indicador Ambiental</th>
+                        <th>Meta Atual (Até 2030)</th>
+                        <th>Impacto Esperado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Redução do Uso de Água (Irrigação)</td>
+                        <td>- 25% com gotejamento eficiente</td>
+                        <td>Preservação de bacias hidrográficas vitais.</td>
+                    </tr>
+                    <tr>
+                        <td>Adoção de Energia Renovável</td>
+                        <td>80% das fazendas com energia solar/biogás</td>
+                        <td>Independência energética e emissão zero na produção.</td>
+                    </tr>
+                    <tr>
+                        <td>Recuperação de Pastagens Degradadas</td>
+                        <td>40 milhões de hectares recuperados</td>
+                        <td>Aumento da produtividade sem novos desmatamentos.</td>
+                    </tr>
+                    <tr>
+                        <td>Uso de Bioinsumos (Defensivos Naturais)</td>
+                        <td>Dobrar a utilização no mercado atual</td>
+                        <td>Alimentos mais saudáveis e solo enriquecido.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contato">
+            <h2>Una-se ao Movimento Verde</h2>
+            <p>Se você é produtor, estudante, agrônomo ou entusiasta do futuro do planeta, envie suas dúvidas ou compartilhe seu projeto sustentável conosco!</p>
+            <br>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil">Seu perfil no Agro:</label>
+                    <select id="perfil" name="perfil">
+                        <option value="produtor">Produtor Rural</option>
+                        <option value="estudante">Estudante / Pesquisador</option>
+                        <option value="empresario">Empresário do Setor</option>
+                        <option value="entusiasta">Apenas um entusiasta do tema</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Compartilhe sua ideia ou iniciativa sustentável:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos como você enxerga o futuro do campo..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar Iniciativa</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte, Futuro Sustentável - Cultivando a vida, colhendo o amanhã.</p>
     </footer>
 
 </body>
